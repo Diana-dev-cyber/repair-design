@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 
 
+
 // Static server
 function bs() {
   serveSass();
@@ -17,6 +18,7 @@ function bs() {
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
+  watch("./sass/**/*.scss", serveSass);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
@@ -28,3 +30,24 @@ function serveSass() {
 };
 
 exports.serve = bs;
+
+
+
+
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+
+gulp.task('hello', function (done) {
+  console.log('Привет, мир!');
+  done();
+});
+
+// Static server
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+  gulp.watch("./*.html").on('change', browserSync.reload)
+});
