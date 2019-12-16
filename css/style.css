@@ -430,6 +430,8 @@ img {
   align-items: center; }
 
 .logo {
+  margin-left: 0;
+  font-size: 1.2rem;
   color: #E3B873;
   text-transform: uppercase; }
 
@@ -437,7 +439,7 @@ img {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem;
+  margin-right: 2.6rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -469,13 +471,15 @@ img {
     max-width: 47.85rem;
     margin-left: 4.28rem; }
   .hero__text {
+    line-height: 2.1rem;
     font-size: 1.58rem;
     max-width: 500px;
-    margin: 1em 0 3rem; }
+    margin: -0.3em 0 3.3rem; }
   .hero__button {
     margin-right: 16px;
     padding: 18px 26px;
-    font-size: 0.93rem; }
+    font-size: 0.93rem;
+    width: 14.8rem; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -524,12 +528,13 @@ img {
       margin-left: 8px; }
 
 .title {
+  line-height: 3.9rem;
   margin: 0;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
   font-weight: normal;
-  margin-block-end: 0.83em; }
+  margin-block-end: 0.5em; }
   .title--primary {
     color: #E3B873; }
 
@@ -550,44 +555,44 @@ img {
 
 .card__text {
   position: relative;
-  max-width: 25rem;
+  max-width: 23.5rem;
   margin: 0 auto;
   margin-top: -9.3rem;
-  padding: 1rem 1.80rem;
+  padding: 1.8rem 1.9rem;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
 
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
+  margin-left: 0.3rem;
   margin-top: 0;
-  margin-bottom: 0.9rem; }
+  margin-bottom: 0.5rem; }
 
 .card__list {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 0.4rem;
   margin: 0;
   font-size: 1.07rem;
-  line-height: 1.79rem;
+  line-height: 1.9rem;
   color: #959595;
-  margin-bottom: 2.5rem;
-  margin-left: 0.8rem; }
+  margin-bottom: 1.8rem;
+  margin-left: 1rem; }
 
 .card__pricetag {
   position: absolute;
   left: 0;
-  button: -1.79rem;
   font-size: 1.29rem;
   font-family: 'Yeseva One', cursive;
   font-weight: normal;
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 2.4rem;
-  width: 16.28rem;
+  padding: 1.3rem 2.4rem;
+  width: 16.6rem;
   height: 3.857rem; }
 
 .design__section-title {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.1rem;
   margin-top: -2rem; }
 
 .modal {
