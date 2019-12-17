@@ -4,7 +4,6 @@
     flex-wrap: wrap
     &__text
       flex-basis: 50%
-      // font-weight: normal
       margin-bottom: 2.42rem
       padding-bottom: 2rem
     &__heading 
@@ -12,11 +11,9 @@
       line-height: 1.78rem   
       font-family: 'Yeseva One', cursive
       color: $primary
-      // font-family: serif
+      font-weight: normal
       text-transform: uppercase
       margin-bottom: 0.64rem
-    .swiper-container-horizontal>.swiper-pagination-bullets  
-      width: auto
   &-pagination
     &-bullet
       background-color: rgba($light, 0.3)  
@@ -36,6 +33,9 @@
       background: url('../img/arrow-prev.svg') no-repeat center
     &-next
       background: url('../img/arrow-next.svg') no-repeat center
+.swiper-container-horizontal>.swiper-pagination-bullets  
+  width: auto 
+  bottom: -1px    
 
 
 
