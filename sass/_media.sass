@@ -12,6 +12,29 @@
       display: none
     &__content 
       margin-left: 0
+  .section
+    &-title
+      &--left
+        width: 22.785rem
+        margin-bottom: 2.57rem
+        margin: 0
+      &__text
+        margin-bottom: 1.57rem  
+        height: 100%  
+        width: 21.787rem
+        text-align: center
+        font-size: 14px
+        line-height: 1.7rem
+        font-family: 'Futura Book'      
+      &__word
+        justify-content: center
+        &::after
+          display: none   
+      &__heading
+        text-align: center 
+  .mobile-order 
+    margin-top: -2rem
+    height: 100%        
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -31,7 +54,24 @@
   .card__pricetag
     box-shadow: 5px 5px 10px rgba($primary, 0.3)
     width: 17rem 
-    text-align: center
+    text-align: center     
+  .col-50
+    display: flex
+    align-content: flex-end 
+    width: 100%
+    .swiper
+      &-container   
+        &-initialized  
+          height: 100%               
+          width: 24.357rem
+  &-pagination
+      margin-right: 1rem
+  .swiper
+    &-slider 
+      &-image
+        margin-top: 0
+  .mobile-order 
+    order: -1     
 @media screen and ( max-width: 570px )
   .section
     &-title
@@ -60,6 +100,26 @@
       min-width: 22.86rem
       width: 100%
       margin-bottom: 1.85rem
+  .section
+    &-title
+      &--left
+        width: 21.785rem
+        margin-bottom: 2.57rem
+        margin: auto
+      &__text
+        margin-bottom: 1.57rem  
+        height: 100%  
+        width: 21.787rem
+        text-align: center
+        font-size: 14px
+        line-height: 1.7rem
+        font-family: 'Futura Book'      
+      &__word
+        justify-content: center
+        &::after
+          display: none   
+      &__heading
+        text-align: center     
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
