@@ -3,7 +3,7 @@
     font-size: 12px
   .nav
     &__item
-      margin-right: 1rem
+      margin-right: 1rem    
 @media screen and ( max-width: 992px )
   .nav
     display: none
@@ -16,8 +16,8 @@
     &-title
       &--left
         width: 22.785rem
-        margin-bottom: 2.57rem
         margin: 0
+        margin-bottom: 36px 
       &__text
         margin-bottom: 1.57rem  
         height: 100%  
@@ -34,7 +34,38 @@
         text-align: center 
   .mobile-order 
     margin-top: -2rem
-    height: 100%        
+    height: 100% 
+  .control
+    background: $dark
+    &__text
+      margin: auto
+      font-size: 14px
+      color: $light
+      line-height: 23px
+    &__label
+      background-color: transparent
+      color: $light
+      margin-bottom: 2px
+    &__input-group
+      margin-top: 1.857rem
+      margin-bottom: 2.5rem   
+    &__policy
+      margin-top: -2rem
+      align-self: flex-start
+      color: $light
+    &__button
+      margin: auto
+      margin-top: 4.45rem 
+      margin-bottom: -6.8rem
+      width: 24.28rem 
+      order: 1
+    .container
+      justify-content: center
+      margin: auto
+    .form
+      display: flex
+      justify-content: center
+      flex-direction: column     
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -59,11 +90,17 @@
     display: flex
     align-content: flex-end 
     width: 100%
-    .swiper
-      &-container   
-        &-initialized  
-          height: 100%               
-          width: 24.357rem
+  .section
+    &-title
+      &--left
+        width: 22.785rem
+        margin: 0 auto
+        margin-bottom: 36px  
+  .swiper
+    &-container   
+      &-initialized  
+        height: 100%            
+        width: 24.357rem
   &-pagination
       margin-right: 1rem
   .swiper
@@ -71,7 +108,39 @@
       &-image
         margin-top: 0
   .mobile-order 
-    order: -1     
+    order: -1 
+  .control
+    background: $dark
+    &__text
+      margin: auto
+      max-width: 100%
+      font-size: 14px
+      color: $light
+      line-height: 23px
+    &__label
+      background-color: transparent
+      color: $light
+      margin-bottom: 2px
+    &__input-group
+      margin-top: 1.857rem
+      margin-bottom: 2.5rem   
+    &__policy
+      margin-top: -2rem
+      align-self: flex-start
+      color: $light
+    &__button
+      margin: auto
+      margin-top: 4.45rem 
+      margin-bottom: -6.8rem
+      width: 24.28rem 
+      order: 1
+    .container
+      justify-content: center
+      margin: auto
+    .form
+      display: flex
+      justify-content: center
+      flex-direction: column     
 @media screen and ( max-width: 570px )
   .section
     &-title
@@ -104,8 +173,8 @@
     &-title
       &--left
         width: 21.785rem
-        margin-bottom: 2.57rem
         margin: auto
+        margin-bottom: 36px
       &__text
         margin-bottom: 1.57rem  
         height: 100%  
@@ -119,12 +188,44 @@
         &::after
           display: none   
       &__heading
-        text-align: center     
+        text-align: center 
+  .control
+    background: $dark
+    &__text
+      margin: auto
+      max-width: 27rem
+      font-size: 14px
+      color: $light
+      line-height: 23px
+    &__label
+      background-color: transparent
+      color: $light
+      margin-bottom: 2px
+    &__input-group
+      margin-top: 1.857rem
+      margin-bottom: 2.5rem   
+    &__policy
+      margin-top: -2rem
+      align-self: flex-start
+      color: $light
+    &__button
+      margin: auto
+      margin-top: 4.45rem 
+      margin-bottom: -6.8rem
+      width: 24.28rem 
+      order: 1
+    .container
+      justify-content: center
+      margin: auto
+    .form
+      display: flex
+      justify-content: center
+      flex-direction: column    
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
       display: none
-
+  
       
         
 
