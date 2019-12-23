@@ -48,6 +48,41 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 10);
 
   new WOW().init();
-  // prev.css('center', next.width() + 10 + bullets.width() + 10);
-  // prev.css('center', bullets.width() + 10);
+
+  // Влидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+       required: true,
+       minlength: 2,
+       maxlength: 15
+      },
+      userPhone: "required",
+      // првило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, //правила сообщений
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email: name@domain.com",
+        
+      }
+    }
+  });
+
+  // маска для телефона
+
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
 });
