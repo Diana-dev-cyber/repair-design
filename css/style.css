@@ -373,8 +373,11 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-label.invalid {
-  color: tomato; }
+label {
+  bottom: 0; }
+  label.invalid {
+    position: absolute;
+    color: tomato; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -857,9 +860,10 @@ img {
   .modal__input-group {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin-bottom: 3.428rem; }
   .modal__input:last-of-type {
-    margin-bottom: 1rem; }
+    margin-bottom: 1.5rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {

@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   new WOW().init();
 
-  // Влидация формы
+  // Влидация формы modal
   $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
@@ -61,7 +61,7 @@ $(document).ready(function () {
       },
       userPhone: "required",
       // првило-объект (блок)
-      userEmail: {
+        userEmail: {
         required: true,
         email: true
       }
@@ -84,5 +84,73 @@ $(document).ready(function () {
   // маска для телефона
 
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
+  // Влидация формы control
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // првило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, //правила сообщений
+    messages: {
+        userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длинее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email: name@domain.com",
+
+      }
+    }
+  });
+
+   // Влидация формы footer
+   $('.footer__form').validate({
+     errorClass: "invalid",
+     rules: {
+       // строчное правило
+         userQuestion: {
+         required: true,
+       },
+         userName: {
+         required: true,
+         minlength: 2,
+         maxlength: 15
+       },
+       userPhone: "required",
+       // првило-объект (блок)
+       userEmail: {
+         required: true,
+         email: true
+       }
+     }, //правила сообщений
+     messages: {
+       userName: {
+         required: "Имя обязательно",
+         minlength: "Имя не короче двух букв",
+         maxlength: "Имя не длинее 15 букв"
+       },
+       userPhone: "Телефон обязателен",
+       userQuestion: "Заполните поле",
+       userEmail: {
+         required: "Заполните поле",
+         email: "Введите корректный email: name@domain.com",
+       }
+     }
+   });
+  
 
 });
