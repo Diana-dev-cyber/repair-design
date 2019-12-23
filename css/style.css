@@ -813,6 +813,41 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    width: 100%; }
+  .footer__holder-h3 .container {
+    display: flex;
+    justify-content: center;
+    margin-top: -4.5rem;
+    margin-bottom: 1.5rem; }
+  .footer__holder-h3 .holder-icon__image {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #E3B873;
+    border-radius: 100%;
+    margin: 23px 8px;
+    padding: 5px;
+    background-color: #E3B873; }
+  .footer__holder-h3 .icon {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    margin: auto; }
+    .footer__holder-h3 .icon__image {
+      width: 16px;
+      height: 16px; }
+  .footer__holder-h3 .widget {
+    max-width: 39rem;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Yeseva One', cursive;
+    line-height: 28px;
+    color: #E3B873; }
 
 .modal {
   opacity: 0;
@@ -1002,7 +1037,21 @@ img {
     .control .form {
       display: flex;
       justify-content: center;
-      flex-direction: column; } }
+      flex-direction: column; }
+  .footer .container {
+    margin: 0 auto; }
+  .footer__holder-h3 {
+    margin-bottom: 6rem; }
+  .footer__holder {
+    padding-top: 0; }
+    .footer__holder .widget {
+      width: 31rem; }
+  .footer__menu {
+    display: none; }
+  .footer__map {
+    width: 100%;
+    padding: 0;
+    margin-top: -4rem; } }
 
 @media screen and (max-width: 570px) {
   .section-title__description {
@@ -1076,16 +1125,33 @@ img {
       display: flex;
       justify-content: center;
       flex-direction: column; }
-  .footer .input-group {
-    flex-basis: 100%; }
-  .footer .policy {
-    margin-top: -2rem; }
-    .footer .policy__label--center {
-      justify-content: flex-start; }
-  .footer__button {
-    width: 100%; }
-  .footer__menu {
-    display: none; } }
+  .footer {
+    background: #131313;
+    padding-bottom: 2px; }
+    .footer .input-group {
+      flex-basis: 100%; }
+    .footer .policy {
+      margin-top: -2rem; }
+      .footer .policy__label--center {
+        justify-content: flex-start; }
+    .footer__button {
+      width: 100%; }
+    .footer__holder {
+      display: flex;
+      flex-direction: column; }
+    .footer__holder-h3 {
+      order: 1;
+      margin-top: 6rem;
+      margin-bottom: 1rem; }
+      .footer__holder-h3 .widget {
+        width: 26rem;
+        font-size: 18px; }
+    .footer__menu {
+      display: none; }
+    .footer__map {
+      width: 100%;
+      padding: 0;
+      margin-top: 0.5rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
