@@ -220,7 +220,19 @@
     .form
       display: flex
       justify-content: center
-      flex-direction: column    
+      flex-direction: column
+  .footer        
+    .input-group 
+      flex-basis: 100% 
+    .policy
+      margin-top: -2rem
+      &__label
+        &--center
+          justify-content: flex-start
+    &__button
+      width: 100%
+    &__menu
+      display: none      
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
