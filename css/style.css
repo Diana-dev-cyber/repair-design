@@ -373,11 +373,10 @@ template {
   .policy__label--center {
     justify-content: center; }
 
-label {
-  bottom: 0; }
-  label.invalid {
-    position: absolute;
-    color: tomato; }
+label.invalid {
+  position: absolute;
+  top: 4rem;
+  color: tomato; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -699,6 +698,7 @@ img {
 .control__input-group {
   display: flex;
   flex-direction: column;
+  position: relative;
   flex-basis: 30%; }
 
 .control__label {
@@ -798,6 +798,7 @@ img {
     .footer__input-group {
       display: flex;
       flex-direction: column;
+      position: relative;
       flex-basis: 45%;
       margin-bottom: 3.2rem; }
       .footer__input-group--full-width {
