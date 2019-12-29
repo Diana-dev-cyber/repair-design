@@ -3,8 +3,6 @@
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
-$userQuestion = $_POST['userQuestion'];
-
 
 
 // Загрузить автозагрузчик композитора
@@ -41,7 +39,7 @@ try {
  } else {
    echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
  }
-
+  
 } catch (Exception $e) {
    echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }

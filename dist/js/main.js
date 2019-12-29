@@ -83,7 +83,7 @@ $(document).ready(function () {
 
     submitHandler: function (form) {
       $.ajax({
-        type: "POST", 
+        type: "POST",
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
