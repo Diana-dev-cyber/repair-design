@@ -42,13 +42,17 @@
       font-size: 14px
       color: $light
       line-height: 23px
+    .input
+      color: $light  
+      &::placeholder
+        color: $light
     &__label
       background-color: transparent
-      color: $light
-      margin-bottom: 2px
+      color: rgba(255, 255, 255, 0.5)
+      margin-bottom: 2px 
     &__input-group
       margin-top: 1.857rem
-      margin-bottom: 2.5rem   
+      margin-bottom: 2.5rem    
     &__policy
       margin-top: -2rem
       align-self: flex-start
@@ -102,7 +106,7 @@
         height: 100%            
         width: 24.357rem
   &-pagination
-      margin-right: 1rem
+    margin-right: 1rem
   .swiper
     &-slider 
       &-image
@@ -110,20 +114,24 @@
   .mobile-order 
     order: -1 
   .control
-    background: $dark
+    background: $dark  
     &__text
       margin: auto
       max-width: 100%
       font-size: 14px
       color: $light
       line-height: 23px
+    .input
+      color: $light  
+      &::placeholder
+        color: $light   
     &__label
       background-color: transparent
-      color: $light
+      color: rgba(255, 255, 255, 0.5)
       margin-bottom: 2px
     &__input-group
       margin-top: 1.857rem
-      margin-bottom: 2.5rem  
+      margin-bottom: 2.5rem       
     &__policy
       margin-top: -2rem
       align-self: flex-start
@@ -140,16 +148,21 @@
     .form
       display: flex
       justify-content: center
-      flex-direction: column
+      flex-direction: column  
   .footer   
     .container
-       margin: 0 auto 
+      margin: 0 auto
     &__holder-h3
       margin-bottom: 6rem  
     &__holder
       padding-top: 0 
       .widget
         width: 31rem 
+    .contacts    
+      &__phone
+        margin: 0
+        color: $primary
+        text-decoration: none    
     &__menu
       display: none
     &__map
@@ -169,13 +182,12 @@
     &__button
       display: none
   .title
-      font-size: 25px
-      line-height: 3.9rem
+    font-size: 25px
+    line-height: 3.9rem
   .hero
     &__scroll-down
       display: none
     &__content
-      // max-width: 22.86rem 
     &__text
       font-size: 18px
       margin-bottom: 2.28rem
@@ -212,9 +224,13 @@
       font-size: 14px
       color: $light
       line-height: 23px
+    .input
+      color: $light  
+      &::placeholder
+        color: $light
     &__label
       background-color: transparent
-      color: $light
+      color: rgba(255, 255, 255, 0.5)
       margin-bottom: 2px
     &__input-group
       margin-top: 1.857rem
@@ -228,7 +244,11 @@
       margin-top: 4.45rem 
       margin-bottom: -6.8rem
       width: 24.28rem 
-      order: 1
+      order: 1  
+    &__form
+      &__input
+      &::placeholder
+        color: $light  
     .container
       justify-content: center
       margin: auto
@@ -273,6 +293,5 @@
         
 
         
-  
   
   

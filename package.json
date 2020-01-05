@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Diana-dev-cyber/repair-design#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
