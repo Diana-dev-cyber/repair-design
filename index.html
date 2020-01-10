@@ -9,10 +9,17 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/thanks.html">
 	<title>Document</title>
 </head>
 
 <body>
+	<!-- Yandex.Metrika counter -->
+	<script
+		type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56967223, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); </script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/56967223" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript> <!-- /Yandex.Metrika counter -->
 	<header class="header">
 		<div class="container">
 			<div class="menu">
@@ -187,7 +194,8 @@
 					<!-- /.section-title__imge -->
 				</div>
 				<!-- /.section-title -->
-				<div class="control__video video">
+				<div class="control__video video" id="player">
+					<script src="https://www.youtube.com/iframe_api"></script>
 					<img src="img/play-icon.svg" alt="play icon" class="video__play">
 				</div>
 				<!-- /.control_video video -->
@@ -196,7 +204,7 @@
 					зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших
 					объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
 				</p>
-				<form action="#" class="form control__form">
+				<form action="send.php" method="POST" class="form control__form">
 					<div class="control__input-group">
 						<label for="user-name" class="label form_label control__label">Имя</label>
 						<input type="text" name="userName" class="input form__input control__input" id="user-name"
@@ -469,17 +477,17 @@
 		<div class="container">
 			<div class="footer__wrap">
 				<h3 class="footer__title">Остались вопросы?</h3>
-				<form action="#" class="form footer__form">
+				<form action="send.php" method="POST" class="form footer__form">
 					<div class="input-group footer__input-group">
 						<label for="user-name" class="label form_label label--light">Имя</label>
-						<input type="text" name="userName" class="input form__input footer__input input--light" id="footer-user-name"
-							placeholder="Как вас зовут:">
+						<input type="text" name="userName" class="input form__input footer__input input--light"
+							id="footer-user-name" placeholder="Как вас зовут:">
 					</div>
 					<!-- /.input-group footer__input-group -->
 					<div class="input-group footer__input-group">
 						<label for="user-phone" class="label form_label label--light">Телефон</label>
-						<input type="tel" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone"
-							placeholder="Ваш номер телефона:">
+						<input type="tel" name="userPhone" class="input form__input footer__input input--light"
+							id="footer-user-phone" placeholder="Ваш номер телефона:">
 					</div>
 					<!-- /.input-group footer__input-group -->
 					<div class="input-group footer__input-group footer__input-group--full-width">
@@ -503,12 +511,13 @@
 				<div class="footer__holder-h3">
 					<div class="container">
 						<div class="holder">
-							<h3 class="widget holer__h3"> Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299" class="phone contacts__phone holder__phone">+7(999)768-32-99</a></h3>
+							<h3 class="widget"> Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299"
+									class="phone contacts__phone holder__phone">+7(999)768-32-99</a></h3>
 							<div class="icon">
-								<a src="#" class="holder-icon__image">
+								<a href="#" class="holder-icon__image">
 									<img src="img/icon-email.svg" class="icon__image" alt="instogram">
 								</a>
-								<a src="#" class="holder-icon__image">
+								<a href="#" class="holder-icon__image">
 									<img src="img/icon-instogram.svg" class="icon__image" alt="email">
 								</a>
 							</div>
@@ -556,7 +565,7 @@
 		<div class="modal__dialog">
 			<button class="modal__close"></button>
 			<h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-			<form action="#" class="form modal__form">
+			<form action="send.php" method="POST" class="form modal__form">
 				<div class="input-group modal__input-group">
 					<label for="user-name" class="label form_label label--light">Имя</label>
 					<input type="text" name="userName" class="input form__input modal__input input--light" id="modal-user-name"

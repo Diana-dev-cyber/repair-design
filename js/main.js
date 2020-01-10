@@ -83,11 +83,12 @@ $(document).ready(function () {
 
     submitHandler: function (form) {
       $.ajax({
-        type: "POST", 
+        type: "POST",
         url: "send.php",
         data: $(form).serialize(),
+        daaType: 'thanks.html',
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          // alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
         },
@@ -170,6 +171,21 @@ $(document).ready(function () {
       }
     }
   });
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '465',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
 
+  function videoPlay(event) {
+    event.target.playVideo();
+
+  }
 
 });

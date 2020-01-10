@@ -23,9 +23,9 @@ try {
   $mail->SMTPAuth   = true;                                   // Включить проверку подлинности SMTP
   $mail->Username   = 'mak205468@gmail.com';                     // Имя пользователя SMTP
   $mail->Password   = '379973Din';                               // SMTP пароль
-  $mail->SMTPSecure = 'ssl';         // Включить шифрование TLS; 'PHPMailer:: ENCRYPTION_SMTPS' также принимается
+  $mail->SMTPSecure = 'ssl';         // Включить шифрование TLS и ssl; 'PHPMailer:: ENCRYPTION_SMTPS' также принимается
   $mail->Port       = 465;                                    // TCP-порт для подключения
-  $mail->CharSet = 'utf-8'; 
+  $mail->CharSet = 'utf-8';
 
   //Получатели
   $mail->setFrom('mak205468@gmail.com', 'Диана');
@@ -36,12 +36,9 @@ try {
   $mail->Subject = 'Новая заявка с сайта';
   $mail->Body    = "Имя пользователя: ${userName}, Его телефон: ${userPhone}, Его email: ${userEmail}";
 
- if ($mail->send()) {
-   echo "OK";
- } else {
-   echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
- }
 
+  $mail->send();
+  header('Location: thanks.html');
 } catch (Exception $e) {
-   echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+  echo "Письмо не отправленно, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
