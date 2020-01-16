@@ -82,7 +82,7 @@ function fonts(done) {
 function imagemin(done) {
   src('img/**/**')
     .pipe(tinypng({
-      key: 'M9GpzMB9YQ24KQCsbLKd9tV6VnJ84pFP',
+      key: 'JHdqqC0GMxKl9xNhl3W6cbBnKLPT5Qbc',
     }))
     .pipe(dest('dist/img/'))
   src('img/**/*.svg')
