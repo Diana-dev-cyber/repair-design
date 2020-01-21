@@ -25,7 +25,7 @@ try {
   $mail->Password   = '379973Din';                               // SMTP пароль
   $mail->SMTPSecure = 'ssl';         // Включить шифрование TLS и ssl; 'PHPMailer:: ENCRYPTION_SMTPS' также принимается
   $mail->Port       = 465;                                    // TCP-порт для подключения
-  $mail->CharSet = 'utf-8';
+  $mail->CharSet = 'utf-8';          //кодировка
 
   //Получатели
   $mail->setFrom('mak205468@gmail.com', 'Диана');
@@ -34,7 +34,7 @@ try {
   // Content
   $mail->isHTML(true);                                  // Установите формат электронной почты в HTML
   $mail->Subject = 'Новая заявка с сайта';
-  $mail->Body    = "Имя пользователя: ${userName}, Его телефон: ${userPhone}, Его email: ${userEmail}";
+  $mail->Body    = "Имя пользователя: ${userName}, Его(Её) телефон: ${userPhone}, Его(Её) email: ${userEmail}, Его(Её) вопрос: ${userQuestion}";
 
 
   $mail->send();

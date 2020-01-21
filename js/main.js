@@ -1,21 +1,3 @@
-/*
-document.addEventListener("DOMContentLoaded", function (event) {
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal); 
-  });
-
-  closeBtn.addEventListener('click', switchModal)
-
-});
-*/
-
-
 $(document).ready(function () {
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
@@ -91,11 +73,15 @@ $(document).ready(function () {
           // alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          footer.removeClass('footer--visible');
         },
         error: function (response) {
           console.error('Ошибка запроса ' + response);
         }
       });
+      done(function () {
+        window.location = "../thanks.html"
+      })
     }
 
   });
@@ -187,55 +173,53 @@ $(document).ready(function () {
     event.target.playVideo();
 
   }
+  // показывать карту только когда до крутили до нее
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var lazyloadImages;
+  var design = $('.design');
+  var designTop = design.offset().top;
+  $(window).bind('scroll', function () {
+    var windowTop = $(this).scrollTop();
+    if (windowTop > designTop) {
+      $('#map').html('<script type="text/javascript" charset="utf-8" async src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A504457943a3c9b8267af4090cbf4930e85ce186de3568b7f44dbcf5c554d9c5c&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=true" ></script >')
+      $(window).unbind('scroll')
+    }
+  });
 
-  //   if ("IntersectionObserver" in window) {
-  //     lazyloadImages = document.querySelectorAll("img[data-src]");
-  //     var imageObserver = new IntersectionObserver(function (entries, observer) {
-  //       entries.forEach(function (entry) {
-  //         if (entry.isIntersecting) {
-  //           var image = entry.target;
-  //           image.src = image.dataset.src;
-  //           image.classList.remove("lazy");
-  //           imageObserver.unobserve(image);
-  //         }
-  //       });
-  //     });
+  type = "text/javascript" > (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () {
+      (m[i].a = m[i].a || []).push(arguments)
+    };
+    m[i].l = 1 * new Date();
+    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+  ym(56967223, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true
+  });
 
-  //     lazyloadImages.forEach(function (image) {
-  //       imageObserver.observe(image);
-  //     });
-  //   } else {
-  //     var lazyloadThrottleTimeout;
-  //     lazyloadImages = document.querySelectorAll(".lazy");
+  /* begin Scroll Down Button */
+  (function () {
+    'use strict';
 
-  //     function lazyload() {
-  //       if (lazyloadThrottleTimeout) {
-  //         clearTimeout(lazyloadThrottleTimeout);
-  //       }
+    var btnScrollDown = document.querySelector('#scroll_down');
 
-  //       lazyloadThrottleTimeout = setTimeout(function () {
-  //         var scrollTop = window.pageYOffset;
-  //         lazyloadImages.forEach(function (img) {
-  //           if (img.offsetTop < (window.innerHeight + scrollTop)) {
-  //             img.src = img.dataset.src;
-  //             img.classList.remove('lazy');
-  //           }
-  //         });
-  //         if (lazyloadImages.length == 0) {
-  //           document.removeEventListener("scroll", lazyload);
-  //           window.removeEventListener("resize", lazyload);
-  //           window.removeEventListener("orientationChange", lazyload);
-  //         }
-  //       }, 20);
-  //     }
+    function scrollDown() {
+      var windowCoords = document.documentElement.clientHeight;
+      (function scroll() {
+        if (window.pageYOffset < windowCoords) {
+          window.scrollBy(0, 10);
+          setTimeout(scroll, 0);
+        }
+        if (window.pageYOffset > windowCoords) {
+          window.scrollTo(0, windowCoords);
+        }
+      })();
+    }
 
-  //     document.addEventListener("scroll", lazyload);
-  //     window.addEventListener("resize", lazyload);
-  //     window.addEventListener("orientationChange", lazyload);
-  //   }
-  // })
+    btnScrollDown.addEventListener('click', scrollDown);
+  })();
+  /* end Scroll Down Button */
 
 });
